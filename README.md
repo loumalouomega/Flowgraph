@@ -1,56 +1,130 @@
-# FlowGraph
+# Kratos FlowGraph
 
-A node editor for Kratos Problemtypes
+[![npm version](https://img.shields.io/npm/v/kratos-flowgraph.svg)](https://www.npmjs.com/package/kratos-flowgraph)
+[![npm downloads](https://img.shields.io/npm/dm/kratos-flowgraph.svg)](https://www.npmjs.com/package/kratos-flowgraph)
+[![Publish to NPM](https://github.com/KratosMultiphysics/Flowgraph/actions/workflows/publish.yml/badge.svg)](https://github.com/KratosMultiphysics/Flowgraph/actions/workflows/publish.yml)
+[![Deploy Docs](https://github.com/KratosMultiphysics/Flowgraph/actions/workflows/docs.yml/badge.svg)](https://github.com/KratosMultiphysics/Flowgraph/actions/workflows/docs.yml)
+[![Documentation](https://img.shields.io/badge/docs-vitepress-42b883.svg)](https://kratosmultiphysics.github.io/Flowgraph/)
+[![License: AGPL-3.0-or-later](https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org/)
+
+**A visual node editor for configuring [KratosMultiphysics](https://github.com/KratosMultiphysics/Kratos) simulations.**
+
+Instead of authoring a Kratos `ProjectParameters.json` by hand, you wire together nodes — analysis
+stages, solvers, materials, processes, model parts and outputs — on a canvas, and FlowGraph
+generates the JSON (and material files) for you.
+
+![The Kratos FlowGraph editor](doc/public/screenshots/connected-graph.png)
+
+## Quick start
+
+Run the editor without installing anything:
+
+```sh
+npx kratos-flowgraph
+```
+
+Then open **<http://localhost:8182>** in your browser.
+
+> 📖 **Full documentation:** <https://kratosmultiphysics.github.io/Flowgraph/>
+
+## Features
+
+- 🧩 **Visual, node-based configuration** — build a Kratos case by connecting nodes; the graph *is*
+  the configuration.
+- ⚙️ **Rich Kratos node library** (~85 node types) — analysis stages & orchestrators, fluid /
+  structural / thermal / potential-flow solvers, serial & MPI linear solvers, constitutive laws
+  (elastic, plasticity, damage), boundary-condition processes, modelers and output processes.
+- 🔁 **Round-trip** — import an existing `ProjectParameters.json` and FlowGraph reconstructs the
+  graph, or export the current graph as a zipped, ready-to-run case.
+- 🖥️ **Live JSON viewer** — inspect the generated JSON as you build.
+- 🚀 **No build step** — a small Node/Express server serves the editor; launch it with one command.
 
 ## Installation
-Install [node.js](https://nodejs.org/en/download/package-manager)
 
-Ej. Ubuntu
-```console
-sudo apt install nodejs npm
-``` 
+### Run instantly (recommended)
 
-Clone this repo
-
-```console
-git clone https://github.com/KratosMultiphysics/Flowgraph.git
+```sh
+npx kratos-flowgraph
 ```
 
-Navigate into the Flowgraph directory and install packages
+### Global install
 
-```console
+```sh
+npm install -g kratos-flowgraph
+kratos-flowgraph
+```
+
+### From source
+
+```sh
+git clone https://github.com/KratosMultiphysics/Flowgraph.git
 cd Flowgraph
 npm install
-sudo npm install -g nodemon
+npm start        # node app.js
+# or
+npm run devstart # nodemon app.js (auto-reload)
 ```
 
-## How to run
-
-For users use either
-
-```console
-npm run start 
-```
-
-```console
-node app.js
-```
-
-For developers
-
-```console
-npm run devstart 
-```
+Requires **Node.js 18+**.
 
 ## Configuration
 
-You can change the configuration file used by setting the `NODE_ENV` variable. For example
+Configuration lives in `config/default.json` (via the [`config`](https://www.npmjs.com/package/config)
+package):
 
-```console
-export NODE_ENV=debug
+```json
+{
+    "host" : "127.0.0.1",
+    "port" : "8182",
+    "kratos_root": "/path/to/Kratos/bin/Release",
+    "working_dir": "/path/to/working_dir",
+    "python_binary": "python3"
+}
 ```
 
-will use `confg/debug.json` configure file.
+Switch config files with `NODE_ENV`, e.g. `NODE_ENV=debug npm start` loads `config/debug.json`.
+
+> The editor UI needs **no Kratos installation**. `kratos_root`, `working_dir` and `python_binary`
+> are only used by the optional "run simulation" backend route.
+
+## Documentation
+
+The full documentation — installation, a getting-started walkthrough, the complete node reference,
+and developer/architecture guides — is published with VitePress at:
+
+**<https://kratosmultiphysics.github.io/Flowgraph/>**
+
+The sources live in [`doc/`](doc/):
+
+```sh
+npm run docs:dev          # local docs dev server
+npm run docs:build        # build the static docs
+npm run docs:screenshots  # regenerate UI screenshots with Playwright
+```
+
+## Contributing
+
+Contributions are welcome! When adding a feature or node, please keep the documentation in sync —
+this is a project rule (see [CLAUDE.md](CLAUDE.md)):
+
+> Whenever a new feature, node, or user-facing change is added, update **CLAUDE.md**, **README.md**
+> and the **`doc/`** documentation in the same change (and regenerate screenshots if the UI
+> changed). A feature is not complete until the docs reflect it.
+
+Adding a node is easy: drop a `.js` file under `public/js/nodes/<category>/` that calls
+`LiteGraph.registerNodeType(...)` — it is auto-discovered. See
+[the developer guide](https://kratosmultiphysics.github.io/Flowgraph/development/adding-a-node).
+
+## Publishing
+
+Publishing to NPM is automated: bump `version` in `package.json` and create a **GitHub Release** —
+the [`publish.yml`](.github/workflows/publish.yml) workflow publishes `kratos-flowgraph` using the
+`NPM_TOKEN` secret. Docs deploy to GitHub Pages on every push to `master`.
+
+## License
+
+[AGPL-3.0-or-later](LICENSE).
 
 <!-- ## Description 
 

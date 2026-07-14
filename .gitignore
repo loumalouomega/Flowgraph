@@ -1,3 +1,13 @@
 node_modules
 package-lock.json
 simulations/*
+
+# Playwright
+test-results
+playwright-report
+blob-report
+.cache
+
+# VitePress
+doc/.vitepress/cache
+doc/.vitepress/dist
