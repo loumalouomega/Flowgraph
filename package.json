@@ -1,11 +1,29 @@
 {
-  "name": "flowgraph",
+  "name": "kratos-flowgraph",
   "version": "1.0.0",
   "description": "Node editor to configure KratosMultiphysics simulations",
   "type": "module",
+  "bin": {
+    "kratos-flowgraph": "bin/kratos-flowgraph.js"
+  },
+  "main": "app.js",
+  "files": [
+    "app.js",
+    "bin/",
+    "src/",
+    "public/",
+    "views/",
+    "config/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "start": "node ./app.js",
-    "devstart": "nodemon ./app.js"
+    "devstart": "nodemon ./app.js",
+    "docs:dev": "vitepress dev doc",
+    "docs:build": "vitepress build doc",
+    "docs:preview": "vitepress preview doc",
+    "docs:screenshots": "playwright test"
   },
   "nodemonConfig": {
     "ignore": [
@@ -14,16 +32,40 @@
   },
   "keywords": [
     "KratosMultiphysics",
+    "Kratos",
     "Node",
     "Flow",
-    "Graph"
+    "Graph",
+    "Editor",
+    "Simulation",
+    "FEM",
+    "CFD"
   ],
   "author": "roigcarlo@gmail.com",
   "license": "AGPL-3.0-or-later",
-  "devDependencies": {
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KratosMultiphysics/Flowgraph.git"
+  },
+  "homepage": "https://kratosmultiphysics.github.io/Flowgraph/",
+  "bugs": {
+    "url": "https://github.com/KratosMultiphysics/Flowgraph/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
     "config": "^3.3.11",
     "cors": "^2.8.5",
     "ejs": "^3.1.9",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "nodemon": "^3.1.0",
+    "vitepress": "^1.5.0"
   }
 }
