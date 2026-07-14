@@ -118,9 +118,16 @@ Adding a node is easy: drop a `.js` file under `public/js/nodes/<category>/` tha
 
 ## Publishing
 
-Publishing to NPM is automated: bump `version` in `package.json` and create a **GitHub Release** —
-the [`publish.yml`](.github/workflows/publish.yml) workflow publishes `@kratos-flowgraph/flowgraph` using the
-`NPM_TOKEN` secret. Docs deploy to GitHub Pages on every push to `master`.
+Publishing to NPM is automated: pushing a `v*` tag triggers the
+[`publish.yml`](.github/workflows/publish.yml) workflow, which publishes `@kratos-flowgraph/flowgraph`
+using the `NPM_TOKEN` secret. The easy path:
+
+```sh
+npm version patch        # bumps package.json, commits, creates tag vX.Y.Z
+git push && git push --tags
+```
+
+Docs deploy to GitHub Pages on every push to `master`.
 
 ## License
 

@@ -1,11 +1,21 @@
 name: Publish to NPM
 
-# Publishes the `kratos-flowgraph` package to the NPM registry whenever a
-# GitHub Release is published. Bump the `version` field in package.json and
-# create a Release (with a tag such as `v1.2.3`) to trigger a publish.
+# Publishes the `@kratos-flowgraph/flowgraph` package to the NPM registry.
+#
+# Triggers automatically on every pushed tag matching `v*` (e.g. `v1.2.3`),
+# so a normal `npm version patch && git push --tags` publishes a release.
+# Also runs when a GitHub Release is published, and can be started manually.
+#
+# Note: for a tag-push trigger, GitHub uses the workflow file AND package.json
+# from the tagged commit — so always tag a commit that contains this workflow
+# and the version you intend to publish.
 on:
+  push:
+    tags:
+      - 'v*'
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
   publish:

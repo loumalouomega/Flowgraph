@@ -72,9 +72,11 @@ npm run docs:screenshots  # Playwright: boot the app, capture UI screenshots (ne
 
 ## Publishing
 
-- **NPM**: bump `version` in `package.json`, push, then create a **GitHub Release**. The
-  `.github/workflows/publish.yml` workflow publishes `@kratos-flowgraph/flowgraph` using the `NPM_TOKEN` secret.
-  Verify the tarball with `npm pack --dry-run`.
+- **NPM**: `npm version patch` (bumps `package.json`, commits, tags `vX.Y.Z`), then
+  `git push && git push --tags`. Pushing the `v*` tag triggers `.github/workflows/publish.yml`,
+  which publishes `@kratos-flowgraph/flowgraph` via `npm publish --provenance --access public` using
+  the `NPM_TOKEN` secret. (A tag-push run uses the workflow + package.json from the tagged commit, so
+  don't move a tag onto an older commit.) Verify the tarball with `npm pack --dry-run`.
 - **Docs**: pushing to `master` triggers `.github/workflows/docs.yml`, which builds and deploys the
   VitePress site to GitHub Pages (requires Pages source = "GitHub Actions", one-time).
 
