@@ -9,7 +9,7 @@ The fastest way to try FlowGraph is with `npx`, which downloads and runs the pac
 global install:
 
 ```sh
-npx kratos-flowgraph
+npx @kratos-flowgraph/flowgraph
 ```
 
 Then open <http://localhost:8182> in your browser.
@@ -19,7 +19,7 @@ Then open <http://localhost:8182> in your browser.
 To install the CLI permanently:
 
 ```sh
-npm install -g kratos-flowgraph
+npm install -g @kratos-flowgraph/flowgraph
 kratos-flowgraph
 ```
 
@@ -31,7 +31,7 @@ The `kratos-flowgraph` command starts the editor server on port **8182** (see
 Clone the repository if you want to modify FlowGraph or contribute:
 
 ```sh
-git clone https://github.com/KratosMultiphysics/Flowgraph.git
+git clone https://github.com/loumalouomega/Flowgraph.git
 cd Flowgraph
 npm install
 ```

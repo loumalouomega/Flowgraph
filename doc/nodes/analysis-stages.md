@@ -21,7 +21,7 @@ An analysis stage that has no orchestrator input automatically emits a default
 Directory: `public/js/nodes/analysis_stages/`
 
 The base **Analysis stage** node
-([`base/analysis_stage.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/nodes/analysis_stages/base/analysis_stage.js))
+([`base/analysis_stage.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/nodes/analysis_stages/base/analysis_stage.js))
 defines the common inputs/outputs. Its inputs are:
 
 | Input | Slot type | Feeds |

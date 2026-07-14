@@ -5,7 +5,7 @@ graph, it can **reconstruct a graph from an existing** `ProjectParameters.json` 
 inspecting, editing or documenting cases you already have.
 
 This is handled by the "from-JSON converter" in
-[`public/js/extensions/load_project_parameters.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/extensions/load_project_parameters.js),
+[`public/js/extensions/load_project_parameters.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/extensions/load_project_parameters.js),
 which adds `LGraph.prototype.configure_project_parameters()` and a `KratosProblemParametersBuilder`
 class.
 

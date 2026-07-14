@@ -17,7 +17,7 @@ hero:
       link: /guide/installation
     - theme: alt
       text: View on GitHub
-      link: https://github.com/KratosMultiphysics/Flowgraph
+      link: https://github.com/loumalouomega/Flowgraph
 
 features:
   - icon: 🧩
@@ -45,7 +45,7 @@ features:
 ## Quick start
 
 ```sh
-npx kratos-flowgraph
+npx @kratos-flowgraph/flowgraph
 ```
 
 Then open <http://localhost:8182> in your browser.

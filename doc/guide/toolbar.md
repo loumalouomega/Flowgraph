@@ -1,8 +1,8 @@
 # The Toolbar
 
 All top-level actions live in the header toolbar. Their behaviour is implemented in
-[`public/js/code.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/code.js)
-and [`public/js/side.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/side.js).
+[`public/js/code.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/code.js)
+and [`public/js/side.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/side.js).
 
 ![The FlowGraph toolbar](/screenshots/editor-overview.png)
 
@@ -59,8 +59,8 @@ FlowGraph:
 
 | Interaction | Result |
 | --- | --- |
-| **Right-click canvas → Add Node** | Opens the categorized node library ([`extended_menu.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/extensions/extended_menu.js)). |
+| **Right-click canvas → Add Node** | Opens the categorized node library ([`extended_menu.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/extensions/extended_menu.js)). |
 | **Drag output → input** | Creates a connection between two nodes. |
 | **Drag node** | Moves it; **drag canvas** pans the view; **scroll** zooms. |
 | **Click a widget** | Edits the property inline (text / number / combo / toggle / button). |
-| **Select + Delete** | Removes nodes ([`remove_node.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/extensions/remove_node.js)). |
+| **Select + Delete** | Removes nodes ([`remove_node.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/extensions/remove_node.js)). |

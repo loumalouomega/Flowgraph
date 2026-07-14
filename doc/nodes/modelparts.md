@@ -2,8 +2,8 @@
 
 These nodes bring the mesh/geometry into the case and build or transform the Kratos model. Model
 data propagates along connections so downstream nodes know which model parts are available — see
-[`model_manager.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/model_manager.js)
-and [`problem_manager.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/problem_manager.js).
+[`model_manager.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/model_manager.js)
+and [`problem_manager.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/problem_manager.js).
 
 ## Model parts
 

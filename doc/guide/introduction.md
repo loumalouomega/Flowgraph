@@ -23,13 +23,13 @@ relationships as *connections between nodes* makes the structure visible and har
 
 FlowGraph is **not** a bundled single-page app. It is:
 
-- a small **Express + EJS** server ([`app.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/app.js)) that
+- a small **Express + EJS** server ([`app.js`](https://github.com/loumalouomega/Flowgraph/blob/master/app.js)) that
   serves a single canvas page and (optionally) launches Kratos, and
 - a large library of plain-ESM **[litegraph.js](https://github.com/jagenjo/litegraph.js)** node
   definitions served statically from `public/js/nodes/`.
 
 There is no build step for the app. When the server renders the page it walks the node directory
-([`src/module_importer.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/src/module_importer.js))
+([`src/module_importer.js`](https://github.com/loumalouomega/Flowgraph/blob/master/src/module_importer.js))
 and injects every node file as a `<script type="module">`. **Adding a `.js` file under
 `public/js/nodes/` registers a new node — no manifest to edit.**
 

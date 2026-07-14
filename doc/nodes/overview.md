@@ -3,7 +3,7 @@
 FlowGraph ships ~85 node types. Each corresponds to a Kratos concept and produces a fragment of the
 final `ProjectParameters.json`; connections between nodes express the references between those
 fragments. Nodes are auto-discovered from
-[`public/js/nodes/`](https://github.com/KratosMultiphysics/Flowgraph/tree/master/public/js/nodes) —
+[`public/js/nodes/`](https://github.com/loumalouomega/Flowgraph/tree/master/public/js/nodes) —
 the directory layout mirrors the categories in the right-click **Add Node** menu.
 
 ![The categorized node library](/screenshots/add-node-menu.png)
@@ -30,7 +30,7 @@ Each node is a small ES module that:
    writes it to its outputs.
 
 For example, the base **Analysis stage** node
-([`analysis_stages/base/analysis_stage.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/nodes/analysis_stages/base/analysis_stage.js))
+([`analysis_stages/base/analysis_stage.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/nodes/analysis_stages/base/analysis_stage.js))
 takes Problem Data, Solver Settings, Processes and Output Processes as inputs and emits the
 `stages` + `orchestrator` structure of a Kratos case.
 

@@ -1,5 +1,5 @@
 {
-  "name": "kratos-flowgraph",
+  "name": "@kratos-flowgraph/flowgraph",
   "version": "1.0.0",
   "description": "Node editor to configure KratosMultiphysics simulations",
   "type": "module",
@@ -45,11 +45,11 @@
   "license": "AGPL-3.0-or-later",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KratosMultiphysics/Flowgraph.git"
+    "url": "git+https://github.com/loumalouomega/Flowgraph.git"
   },
-  "homepage": "https://kratosmultiphysics.github.io/Flowgraph/",
+  "homepage": "https://loumalouomega.github.io/Flowgraph/",
   "bugs": {
-    "url": "https://github.com/KratosMultiphysics/Flowgraph/issues"
+    "url": "https://github.com/loumalouomega/Flowgraph/issues"
   },
   "engines": {
     "node": ">=18"

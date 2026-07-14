@@ -20,7 +20,7 @@ conditions, …). See [The Toolbar](/guide/toolbar#export-import-selections).
 
 To produce something Kratos can actually run, use an **Export case files** node
 (`IO/DownloadProblem`), implemented in
-[`public/js/nodes/IO/export_case.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/nodes/IO/export_case.js).
+[`public/js/nodes/IO/export_case.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/nodes/IO/export_case.js).
 
 Connect the output of your top-level analysis/orchestrator graph into the node's `data` input, then
 trigger its **Download** button. The node uses [JSZip](https://stuk.github.io/jszip/) to bundle:

@@ -17,7 +17,8 @@ It is **not** a bundled SPA. It is:
   modules served statically from `public/js/nodes/`.
 
 There is **no build step** for the application itself. The published NPM package is
-`kratos-flowgraph`, exposed as a runnable CLI.
+`@kratos-flowgraph/flowgraph` (scoped under the `@kratos-flowgraph` npm org), exposed as a runnable
+`kratos-flowgraph` CLI.
 
 ## Run / develop
 
@@ -72,7 +73,7 @@ npm run docs:screenshots  # Playwright: boot the app, capture UI screenshots (ne
 ## Publishing
 
 - **NPM**: bump `version` in `package.json`, push, then create a **GitHub Release**. The
-  `.github/workflows/publish.yml` workflow publishes `kratos-flowgraph` using the `NPM_TOKEN` secret.
+  `.github/workflows/publish.yml` workflow publishes `@kratos-flowgraph/flowgraph` using the `NPM_TOKEN` secret.
   Verify the tarball with `npm pack --dry-run`.
 - **Docs**: pushing to `master` triggers `.github/workflows/docs.yml`, which builds and deploys the
   VitePress site to GitHub Pages (requires Pages source = "GitHub Actions", one-time).

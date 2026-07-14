@@ -1,10 +1,10 @@
 # Kratos FlowGraph
 
-[![npm version](https://img.shields.io/npm/v/kratos-flowgraph.svg)](https://www.npmjs.com/package/kratos-flowgraph)
-[![npm downloads](https://img.shields.io/npm/dm/kratos-flowgraph.svg)](https://www.npmjs.com/package/kratos-flowgraph)
-[![Publish to NPM](https://github.com/KratosMultiphysics/Flowgraph/actions/workflows/publish.yml/badge.svg)](https://github.com/KratosMultiphysics/Flowgraph/actions/workflows/publish.yml)
-[![Deploy Docs](https://github.com/KratosMultiphysics/Flowgraph/actions/workflows/docs.yml/badge.svg)](https://github.com/KratosMultiphysics/Flowgraph/actions/workflows/docs.yml)
-[![Documentation](https://img.shields.io/badge/docs-vitepress-42b883.svg)](https://kratosmultiphysics.github.io/Flowgraph/)
+[![npm version](https://img.shields.io/npm/v/@kratos-flowgraph/flowgraph.svg)](https://www.npmjs.com/package/@kratos-flowgraph/flowgraph)
+[![npm downloads](https://img.shields.io/npm/dm/@kratos-flowgraph/flowgraph.svg)](https://www.npmjs.com/package/@kratos-flowgraph/flowgraph)
+[![Publish to NPM](https://github.com/loumalouomega/Flowgraph/actions/workflows/publish.yml/badge.svg)](https://github.com/loumalouomega/Flowgraph/actions/workflows/publish.yml)
+[![Deploy Docs](https://github.com/loumalouomega/Flowgraph/actions/workflows/docs.yml/badge.svg)](https://github.com/loumalouomega/Flowgraph/actions/workflows/docs.yml)
+[![Documentation](https://img.shields.io/badge/docs-vitepress-42b883.svg)](https://loumalouomega.github.io/Flowgraph/)
 [![License: AGPL-3.0-or-later](https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org/)
 
@@ -21,12 +21,12 @@ generates the JSON (and material files) for you.
 Run the editor without installing anything:
 
 ```sh
-npx kratos-flowgraph
+npx @kratos-flowgraph/flowgraph
 ```
 
 Then open **<http://localhost:8182>** in your browser.
 
-> 📖 **Full documentation:** <https://kratosmultiphysics.github.io/Flowgraph/>
+> 📖 **Full documentation:** <https://loumalouomega.github.io/Flowgraph/>
 
 ## Features
 
@@ -45,20 +45,20 @@ Then open **<http://localhost:8182>** in your browser.
 ### Run instantly (recommended)
 
 ```sh
-npx kratos-flowgraph
+npx @kratos-flowgraph/flowgraph
 ```
 
 ### Global install
 
 ```sh
-npm install -g kratos-flowgraph
+npm install -g @kratos-flowgraph/flowgraph
 kratos-flowgraph
 ```
 
 ### From source
 
 ```sh
-git clone https://github.com/KratosMultiphysics/Flowgraph.git
+git clone https://github.com/loumalouomega/Flowgraph.git
 cd Flowgraph
 npm install
 npm start        # node app.js
@@ -93,7 +93,7 @@ Switch config files with `NODE_ENV`, e.g. `NODE_ENV=debug npm start` loads `conf
 The full documentation — installation, a getting-started walkthrough, the complete node reference,
 and developer/architecture guides — is published with VitePress at:
 
-**<https://kratosmultiphysics.github.io/Flowgraph/>**
+**<https://loumalouomega.github.io/Flowgraph/>**
 
 The sources live in [`doc/`](doc/):
 
@@ -114,12 +114,12 @@ this is a project rule (see [CLAUDE.md](CLAUDE.md)):
 
 Adding a node is easy: drop a `.js` file under `public/js/nodes/<category>/` that calls
 `LiteGraph.registerNodeType(...)` — it is auto-discovered. See
-[the developer guide](https://kratosmultiphysics.github.io/Flowgraph/development/adding-a-node).
+[the developer guide](https://loumalouomega.github.io/Flowgraph/development/adding-a-node).
 
 ## Publishing
 
 Publishing to NPM is automated: bump `version` in `package.json` and create a **GitHub Release** —
-the [`publish.yml`](.github/workflows/publish.yml) workflow publishes `kratos-flowgraph` using the
+the [`publish.yml`](.github/workflows/publish.yml) workflow publishes `@kratos-flowgraph/flowgraph` using the
 `NPM_TOKEN` secret. Docs deploy to GitHub Pages on every push to `master`.
 
 ## License

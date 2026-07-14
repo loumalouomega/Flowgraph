@@ -6,7 +6,7 @@ export default defineConfig({
   description: 'A node editor for configuring KratosMultiphysics simulations',
   lang: 'en-US',
 
-  // Deployed to GitHub Pages as a project site: https://kratosmultiphysics.github.io/Flowgraph/
+  // Deployed to GitHub Pages as a project site: https://loumalouomega.github.io/Flowgraph/
   base: '/Flowgraph/',
 
   lastUpdated: true,
@@ -27,7 +27,7 @@ export default defineConfig({
       {
         text: 'Links',
         items: [
-          { text: 'NPM package', link: 'https://www.npmjs.com/package/kratos-flowgraph' },
+          { text: 'NPM package', link: 'https://www.npmjs.com/package/@kratos-flowgraph/flowgraph' },
           { text: 'KratosMultiphysics', link: 'https://github.com/KratosMultiphysics/Kratos' },
         ],
       },
@@ -80,7 +80,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/KratosMultiphysics/Flowgraph' },
+      { icon: 'github', link: 'https://github.com/loumalouomega/Flowgraph' },
     ],
 
     search: {
@@ -88,7 +88,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/KratosMultiphysics/Flowgraph/edit/master/doc/:path',
+      pattern: 'https://github.com/loumalouomega/Flowgraph/edit/master/doc/:path',
       text: 'Edit this page on GitHub',
     },
 

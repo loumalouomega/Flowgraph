@@ -1,11 +1,12 @@
 # Publishing
 
-FlowGraph is published to NPM as [`kratos-flowgraph`](https://www.npmjs.com/package/kratos-flowgraph)
-and its documentation is deployed to GitHub Pages. Both are automated with GitHub Actions.
+FlowGraph is published to NPM as [`@kratos-flowgraph/flowgraph`](https://www.npmjs.com/package/@kratos-flowgraph/flowgraph)
+(a scoped package under the `@kratos-flowgraph` org) and its documentation is deployed to GitHub
+Pages. Both are automated with GitHub Actions.
 
 ## Publishing to NPM
 
-The [`publish.yml`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/.github/workflows/publish.yml)
+The [`publish.yml`](https://github.com/loumalouomega/Flowgraph/blob/master/.github/workflows/publish.yml)
 workflow runs whenever a **GitHub Release is published**. It installs dependencies and runs
 `npm publish` using the `NPM_TOKEN` repository secret.
 
@@ -18,7 +19,7 @@ workflow runs whenever a **GitHub Release is published**. It installs dependenci
 
 ::: tip One-time setup
 The `NPM_TOKEN` secret must exist in the repository settings (Settings → Secrets and variables →
-Actions). It should be an **automation** token with publish rights to `kratos-flowgraph`.
+Actions). It should be an **automation** token with publish rights to the `@kratos-flowgraph` org.
 :::
 
 ### What gets published
@@ -33,14 +34,14 @@ npm pack --dry-run
 
 ## Docs deploy
 
-The [`docs.yml`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/.github/workflows/docs.yml)
+The [`docs.yml`](https://github.com/loumalouomega/Flowgraph/blob/master/.github/workflows/docs.yml)
 workflow builds the VitePress site on every push to `master` and deploys `doc/.vitepress/dist` to
 GitHub Pages.
 
 ::: warning One-time setup
 GitHub Pages must be enabled for the repository with the **GitHub Actions** source (Settings →
 Pages → Build and deployment → Source: *GitHub Actions*). The site is served at
-<https://kratosmultiphysics.github.io/Flowgraph/>, which matches the `base` in
+<https://loumalouomega.github.io/Flowgraph/>, which matches the `base` in
 `doc/.vitepress/config.mjs`.
 :::
 

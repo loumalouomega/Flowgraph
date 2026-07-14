@@ -14,15 +14,15 @@ npm run docs:preview  # preview the production build
 
 - Content pages are Markdown files under `doc/` (`guide/`, `nodes/`, `development/`).
 - Navigation and sidebar are configured in
-  [`doc/.vitepress/config.mjs`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/doc/.vitepress/config.mjs).
+  [`doc/.vitepress/config.mjs`](https://github.com/loumalouomega/Flowgraph/blob/master/doc/.vitepress/config.mjs).
 - Static assets (including screenshots) live under `doc/public/` and are referenced with an absolute
   path, e.g. `/screenshots/editor-overview.png`.
 
 ## Regenerating screenshots
 
 Screenshots are produced by
-[`scripts/screenshots/capture.spec.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/scripts/screenshots/capture.spec.js),
-driven by [`playwright.config.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/playwright.config.js).
+[`scripts/screenshots/capture.spec.js`](https://github.com/loumalouomega/Flowgraph/blob/master/scripts/screenshots/capture.spec.js),
+driven by [`playwright.config.js`](https://github.com/loumalouomega/Flowgraph/blob/master/playwright.config.js).
 
 ```sh
 # One-time: install the browser Playwright uses

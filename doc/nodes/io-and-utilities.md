@@ -66,4 +66,4 @@ Directory: `public/js/nodes/utilities/`
 | Process Parser | `utilities/process_parser.js` | Helpers for turning parsed Kratos processes into node data. |
 
 Generic building blocks (constants, math, watch, console, JSON parse/merge, download) also come from
-[`public/js/base.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/base.js).
+[`public/js/base.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/base.js).

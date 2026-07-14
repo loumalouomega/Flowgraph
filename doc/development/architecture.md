@@ -23,12 +23,12 @@ Browser  ──GET /──►  Express (app.js)
 
 | Path | Role |
 | --- | --- |
-| [`app.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/app.js) | Express server. Serves `public/`, renders `index.ejs`, exposes `/upload_json` and `/run_simulation`. |
-| [`bin/kratos-flowgraph.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/bin/kratos-flowgraph.js) | CLI entry point. `chdir`s to the package root, then launches `app.js`. |
-| [`src/module_importer.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/src/module_importer.js) | Walks `public/js/nodes` & `public/js/widgets` and returns the file list injected into the page. |
-| [`views/index.ejs`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/views/index.ejs) | The whole UI: toolbar, `<canvas class="graphcanvas">`, JSON side panel. |
-| [`public/js/code.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/code.js) | Creates the litegraph `Editor`, exposes `window.graph`/`window.graphcanvas`, wires the toolbar. |
-| [`public/js/litegraph/litegraph.core.js`](https://github.com/KratosMultiphysics/Flowgraph/blob/master/public/js/litegraph/litegraph.core.js) | Vendored [litegraph.js](https://github.com/jagenjo/litegraph.js) engine. |
+| [`app.js`](https://github.com/loumalouomega/Flowgraph/blob/master/app.js) | Express server. Serves `public/`, renders `index.ejs`, exposes `/upload_json` and `/run_simulation`. |
+| [`bin/kratos-flowgraph.js`](https://github.com/loumalouomega/Flowgraph/blob/master/bin/kratos-flowgraph.js) | CLI entry point. `chdir`s to the package root, then launches `app.js`. |
+| [`src/module_importer.js`](https://github.com/loumalouomega/Flowgraph/blob/master/src/module_importer.js) | Walks `public/js/nodes` & `public/js/widgets` and returns the file list injected into the page. |
+| [`views/index.ejs`](https://github.com/loumalouomega/Flowgraph/blob/master/views/index.ejs) | The whole UI: toolbar, `<canvas class="graphcanvas">`, JSON side panel. |
+| [`public/js/code.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/code.js) | Creates the litegraph `Editor`, exposes `window.graph`/`window.graphcanvas`, wires the toolbar. |
+| [`public/js/litegraph/litegraph.core.js`](https://github.com/loumalouomega/Flowgraph/blob/master/public/js/litegraph/litegraph.core.js) | Vendored [litegraph.js](https://github.com/jagenjo/litegraph.js) engine. |
 | `public/js/extensions/*.js` | Customisations of the core: categorized menu, custom drawing, node sizing, removal, selection import, ProjectParameters import. |
 | `public/js/nodes/**` | The node library (see the [Node Reference](/nodes/overview)). |
 | `public/js/model_manager.js`, `problem_manager.js` | Track model parts / global problem state across connected nodes. |
